@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans Thai", sans-serif;
+    align-items: center;
+    font-size: 1rem;
+    background: #6A9AB0 !important;
+}
+
+div.container {
+    padding: 1rem;
+    max-width: 600px;
+    border: 8px;
+}
+
+.navbar-brand {
+    width: 2.5rem;
+}
+
+body > div > nav {
+    padding-left: 1rem !important; 
+    font-size: 1rem;
+}
+
+#navbarSupportedContent > ul > li:nth-child(1) > a > i {
+    color: #3A6D8C !important;
+}
+
+#navbarSupportedContent > ul > li:nth-child(2) > a > i {
+    color: #FFB1B1 !important;
+}
+
+#navbarSupportedContent > ul > li:nth-child(3) > a > i {
+    color: #EAD8B1 !important;
+}
+
+#navbarSupportedContent > ul > li.nav-item.dropdown > ul > li:nth-child(1) > a > i {
+    color: #836FFF !important;
+}
+
+#navbarSupportedContent > ul > li.nav-item.dropdown > ul > li:nth-child(2) > a > i {
+    color: #836FFF !important;
+}
+
+body > div > div > form > label > i {
+    color: #836FFF !important;
+}
+
+body > div > div > form > div:nth-child(7) > label > i {
+    color: #C08B5C !important;
+}
+
+body > div > div.pay-data-detail > div:nth-child(1) > label > i {
+    color: #A8CD9F !important;
+}
+
+body > div > div.user-detail > div:nth-child(1) > label > i {
+    color: #836FFF !important;
+}
+
+body > div > form > div > label > i {
+    color: #6A9AB0 !important;
+}
+
+body > div > form > div > div:nth-child(3) > label > i {
+    color: #F6B17A !important;
+}
+
+#form-test-type > label > i {
+    color: #F6B17A !important;
+}
+
+body > div > nav > div {
+    border-radius: 8px !important; 
+}
+
+.form-sign-up-type {
+    background: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.form-sign-up-person {
+    background: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.sign-up-form-contest {
+    margin-top: 1rem;
+}
+
+.user-detail {
+    background: white;
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.pay-detail {
+    background: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.pay-data-detail {
+    background: white;
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}

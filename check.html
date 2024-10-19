@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>
-            PR Math Contest 2024
+            Check Result!
         </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="sign-up-person.html"><i class="bi bi-person-fill" style="margin-left: 0.5rem;"></i> เดี่ยว </a></li>
-                                    <!-- <li><a class="dropdown-item" href="#"><i class="bi bi-people-fill" style="margin-left: 0.5rem;"></i> กลุ่ม </a></li> -->
+                                    <!-- <li><a class="dropdown-item" href=""><i class="bi bi-people-fill" style="margin-left: 0.5rem;"></i> กลุ่ม </a></li> -->
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -41,8 +41,39 @@
                     </div>
                 </div>
             </nav>
-            <div>
-                <img src="./assets/pr_2024.jpg" alt="pr_2024" style="width: 100%; border-radius: 8px; margin-top: 0.5rem;"/>
+            <div class="form-sign-up-person">
+                <form onsubmit="formHandle(event)">
+                <label class="form-label" style="margin-bottom: 1rem;"><i class="bi bi-search" style="margin-left: 0.5rem;"></i> ตรวจสอบสถานะ</label>
+                <div class="row">
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="ชื่อ" required>
+                        <label for="firstname" style="padding-left: 1.5rem;">ชื่อ</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="สกุล" required>
+                        <label for="lastname" style="padding-left: 1.5rem;">สกุล</label>
+                    </div>  
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
+                    <div class="form-floating col-3">
+                        <input type="text" class="form-control" id="year" name="year" placeholder="ปีการแข่งขัน" readonly value="2024">
+                        <label for="year" style="padding-left: 1.5rem;">ปีการแข่งขัน</label>
+                    </div> 
+                    <div class="form-floating col">
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="เบอร์มือถือ" required>
+                        <label for="phone_number" style="padding-left: 1.5rem;">เบอร์มือถือ</label>
+                    </div>  
+                </div>
+                <div class="row" style="margin-top: 1rem;" id="form-test-type">
+                    <label class="form-label"><i class="bi bi-file-bar-graph-fill" style="margin-bottom: 0; margin-left: 0.5rem;"></i> ผลการค้นหา</label>
+                    <div class="row" style="margin: 0.5rem;">
+                        <p id="result"></p>
+                    </div>
+                </div>
+                <div class="row" style="margin: 0.5rem; justify-content: center;">
+                    <button type="submit" class="btn" style="background-color: #3A6D8C; color: white; width: 8rem;">ค้นหา</button>
+                </div>
+                </form>
             </div>
         </div>
     </body>

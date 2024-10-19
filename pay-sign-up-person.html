@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Pay Detail
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./styles/index.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius: 8px;">
+                <div class="container-fluid">
+                    <img class="navbar-brand" href="#" src="./assets/pr_logo.jpg" alt="logo" />
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-fill"></i> หน้าหลัก</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-calendar-plus-fill"></i> สมัครสอบ
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="sign-up-person.html"><i class="bi bi-person-fill" style="margin-left: 0.5rem;"></i> เดี่ยว </a></li>
+                                    <!-- <li><a class="dropdown-item" href="#"><i class="bi bi-people-fill" style="margin-left: 0.5rem;"></i> กลุ่ม </a></li> -->
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="check.html"><i class="bi bi-clipboard-check-fill"></i> ตรวจสอบข้อมูลและคะแนน</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="user-detail">
+                <div class="row">
+                    <label><i class="bi bi-person-fill" style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>สรุปข้อมูล</b></label>
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
+                    <label id="user-detail-full-name"><b>ชื่อ:</b> -</label>
+                </div>
+                <div class="row" style="margin-top: 0.25rem;">
+                    <label id="user-detail-school-data"><b>ชั้น:</b> - <b>โรงเรียน:</b> -</label>
+                </div>
+                <div class="row" style="margin-top: 0.25rem;">
+                    <label id="user-detail-city"><b>จังหวัด:</b> -</label>
+                </div>
+                <div class="row" style="margin-top: 0.25rem;">
+                    <label id="user-detail-phone"><b>เบอร์มือถือ:</b> -</label>
+                </div>
+                <div class="row" style="margin-top: 0.25rem;">
+                    <label id="user-detail-email"><b>อีเมล:</b> -</label>
+                </div>
+            </div>
+            <div class="pay-data-detail">
+                <div class="row">
+                    <label><i class="bi bi-cash-coin" style="margin-left: 0.5rem; margin-right: 0.5rem;"></i> <b>สรุปการชำระเงิน</b></label>
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
+                    <label id="pay-detail-test-taking"><b>รายการสมัครสอบ:</b> -</label>
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
+                    <label id="pay-detail-total-fee"><b>ค่าสมัครรวม:</b> - บาท</label>
+                </div>
+            </div>
+            <form onsubmit="handleOnSubmit(event)">
+                <div class="pay-detail">
+                    <label><i class="bi bi-bank2"  style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>บัญชีธนาคาร</b></label>
+                    <div class="row" style="padding: 0.5rem; margin-top: 0.25rem;">
+                        <div class="col-3" style="text-align: end; margin-left: 10%;" >
+                            <img src="./assets/kbank_logo.png" alt="kbank_logo" style="height: 3.5rem; border-radius: 10rem;"/>
+                        </div>
+                        <div class="col">
+                            <div class="row"><label><b>บัญชี:</b> ธนาคารกรุงไทย</label></div>
+                            <div class="row"><label><b>เลขที่บัญชี:</b> 3190701733</label></div>
+                            <div class="row"><label><b>ชื่อบัญชี:</b> นส.ภาวิณี ชมชิด</label></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="receipt_file" class="form-label"><i class="bi bi-paperclip" style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>แนบหลักฐานการโอน</b></label>
+                        <div class="mb-3 col" style="margin-left: 2rem;">
+                            <input class="form-control" type="file" id="receipt_file" style="width: 90%;" required>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex; justify-content: center; padding: 0.5rem;">
+                        <img src="./assets/pr_2024.jpg" id="imagePreview" class="img-fluid" alt="Image Preview" style="width: 50%;">
+                    </div>
+                    <div class="row" style="margin: 0.5rem; justify-content: center;">
+                        <button type="submit" class="btn" style="background-color: #3A6D8C; color: white; width: 8rem;" id="liveToastBtn">บันทึก</button>
+                    </div>
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header" style="background: #3A6D8C; color: white;">
+                                <strong class="me-auto">PR Math Contest</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                การสมัครสำเร็จ
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="./handlers/pay-sign-up-person.js"></script>
+    </body>
+</html>
