@@ -45,7 +45,7 @@
                 <form onsubmit="formHandle(event)">
                 <label class="form-label" style="margin-bottom: 1rem;"><i class="bi bi-person-fill" style="margin-left: 0.5rem;"></i> ข้อมูลผู้สอบ</label>
                 <div class="row">
-                    <div class="form-floating" style="width: 35%;">
+                    <div class="form-floating col">
                         <select class="form-select" id="prefix" name="prefix" aria-label="prefix" style="padding-left: 1rem; padding-top: 1.75rem;" required>
                             <option selected value="เด็กชาย">เด็กชาย</option>
                             <option value="เด็กหญิง">เด็กหญิง</option>
@@ -55,16 +55,6 @@
                         <label for="prefix" style="padding-left: 1.5rem;">คำนำหน้า</label>
                     </div>
                     <div class="form-floating col">
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="ชื่อ" required>
-                        <label for="firstname" style="padding-left: 1.5rem;">ชื่อ</label>
-                    </div>
-                    <div class="form-floating col">
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="สกุล" required>
-                        <label for="lastname" style="padding-left: 1.5rem;">สกุล</label>
-                    </div>  
-                </div>
-                <div class="row" style="margin-top: 0.5rem;">
-                    <div class="form-floating" style="width: 35%;">
                         <select
                             required
                             class="form-select"
@@ -83,6 +73,18 @@
                         </select>
                         <label for="class_no" style="padding-left: 1.5rem;">ชั้น</label>
                     </div>
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="ชื่อ" required>
+                        <label for="firstname" style="padding-left: 1.5rem;">ชื่อ</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="สกุล" required>
+                        <label for="lastname" style="padding-left: 1.5rem;">สกุล</label>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 0.5rem;">
                     <div class="form-floating col">
                         <input type="text" class="form-control" id="school_name" name="school_name" placeholder="ชื่อโรงเรียน" required>
                         <label for="school_name" style="padding-left: 1.5rem;">โรงเรียน</label>
