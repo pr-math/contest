@@ -12,7 +12,7 @@ body {
 }
 
 div.container {
-    padding: 1rem;
+    padding: 0.25rem;
     max-width: 600px;
     border: 8px;
 }
