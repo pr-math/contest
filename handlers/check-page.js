@@ -56,7 +56,7 @@ const formHandle = (event) => {
             test_taking_data.innerHTML = testTakings;
 
             let is_verify = document.querySelector("#is_verify_status");
-            is_verify.innerHTML = `<b>สถานะการสมัคร:</b> ${userData.transaction.isVerify || "ยังไม่ตรวจสอบสถานะ"}`;
+            is_verify.innerHTML = `<b>สถานะการสมัคร:</b> ${userData.transaction.isVerify ? "ตรวจสอบสถานะสำเร็จ" : "ยังไม่ตรวจสอบสถานะ"}`;
         }
     })
 };
