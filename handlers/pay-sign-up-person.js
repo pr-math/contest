@@ -90,9 +90,9 @@ document.getElementById('form-data').addEventListener('submit', function(event) 
 
     handleOnSent(file_image_ref)
     .then((res) => {
-        if (res.success) {
+        
             window.location.href = "index.html"
-        }
+        
     })
     localStorage.setItem("prefix", '')
     localStorage.setItem("firstname", '')
