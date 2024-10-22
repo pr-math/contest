@@ -92,7 +92,7 @@ const handleOnSubmit = (event) => {
     .then((res) => {
         if (res.success) {
             toastBootstrap.show()
-            setTimeout(() => window.location.href ="index.html", 3000)
+            window.location.href = "index.html"
         }
     })
     localStorage.setItem("prefix", '')
