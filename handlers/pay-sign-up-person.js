@@ -54,23 +54,23 @@ for (let i=0; i<test_taking.length; i++) {
 let test_taking_data = document.querySelector("#pay-detail-test-taking");
 test_taking_data.innerHTML = testTakings;
 
-// document.getElementById('receipt_file').addEventListener('change', function(event) {
-//     const file = event.target.files[0]; // Get the selected file
-//     file_image_ref.append("file", file);
-//     const preview = document.getElementById('imagePreview'); // Get the preview element
+document.getElementById('receipt_file').addEventListener('change', function(event) {
+    const file = event.target.files[0]; // Get the selected file
+    file_image_ref.append("file", file);
+    const preview = document.getElementById('imagePreview'); // Get the preview element
     
-//     if (file) {
-//         const reader = new FileReader(); // Create a FileReader object
+    if (file) {
+        const reader = new FileReader(); // Create a FileReader object
         
-//         reader.onload = function(e) {
-//             preview.src = e.target.result; // Set the src of the preview image
-//             preview.style.display = 'block'; // Show the preview image
-//         }
-//         reader.readAsDataURL(file); // Read the file as a data URL
-//     } else {
-//         preview.style.display = 'none'; // Hide the preview if no file is selected
-//     }
-// });
+        reader.onload = function(e) {
+            preview.src = e.target.result; // Set the src of the preview image
+            preview.style.display = 'block'; // Show the preview image
+        }
+        reader.readAsDataURL(file); // Read the file as a data URL
+    } else {
+        preview.style.display = 'none'; // Hide the preview if no file is selected
+    }
+});
 
 document.getElementById('form-data').addEventListener('submit', function(event) {
     event.preventDefault();
