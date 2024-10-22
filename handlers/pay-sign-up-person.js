@@ -1,3 +1,5 @@
+let file_image_ref = new FormData()
+
 const convertToTestTaking = (key) => {
     if (key === "primary_test") {
         return "ประถมศึกษา (8.30 - 10.30 น.)"
@@ -54,6 +56,7 @@ test_taking_data.innerHTML = testTakings;
 
 document.getElementById('receipt_file').addEventListener('change', function(event) {
     const file = event.target.files[0]; // Get the selected file
+    file_image_ref.append("file", file);
     const preview = document.getElementById('imagePreview'); // Get the preview element
     
     if (file) {
@@ -81,11 +84,17 @@ const handleOnSubmit = (event) => {
         phone_number,
         email,
         total_fee,
-        test_taking,
+        test_list: test_taking,
     };
+    file_image_ref.append('user_data', JSON.stringify(form_data));
 
-    console.log(form_data);
-
+    handleOnSent(file_image_ref)
+    .then((res) => {
+        if (res.success) {
+            toastBootstrap.show()
+            setTimeout(() => window.location.href ="index.html", 3000)
+        }
+    })
     localStorage.setItem("prefix", '')
     localStorage.setItem("firstname", '')
     localStorage.setItem("lastname", '')
@@ -99,7 +108,18 @@ const handleOnSubmit = (event) => {
 
     const toastLiveExample = document.getElementById('liveToast')
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    toastBootstrap.show()
-    setTimeout(() => window.location.href ="index.html", 3000)
 };
 
+const handleOnSent = async (formData) => {
+    try {
+        const response = await fetch('https://back-table-api.shorttermmemorykku.com/transaction_user', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        return result
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
