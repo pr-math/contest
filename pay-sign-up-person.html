@@ -71,7 +71,7 @@
                     <label id="pay-detail-total-fee"><b>ค่าสมัครรวม:</b> - บาท</label>
                 </div>
             </div>
-            <form onsubmit="handleOnSubmit(event)">
+            <form id="form-data">
                 <div class="pay-detail">
                     <label><i class="bi bi-bank2"  style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>บัญชีธนาคาร</b></label>
                     <div class="row" style="padding: 0.5rem; margin-top: 0.25rem;">
@@ -87,7 +87,7 @@
                     <div class="row">
                         <label for="receipt_file" class="form-label"><i class="bi bi-paperclip" style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>แนบหลักฐานการโอน</b></label>
                         <div class="mb-3 col" style="margin-left: 2rem;">
-                            <input class="form-control" type="file" id="receipt_file" style="width: 90%;">
+                            <input class="form-control" type="file" id="receipt_file" style="width: 90%;" required>
                         </div>
                     </div>
                     <div class="row" style="display: flex; justify-content: center; padding: 0.5rem;">
