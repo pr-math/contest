@@ -72,7 +72,7 @@ document.getElementById('receipt_file').addEventListener('change', function(even
     }
 });
 
-document.getElementById('form-data').addEventListener('submit', function(event) {
+const handleOnSubmit = (event) => {
     event.preventDefault();
     const form_data = {
         prefix, 
@@ -90,7 +90,7 @@ document.getElementById('form-data').addEventListener('submit', function(event) 
 
     handleOnSent(file_image_ref)
     .then((res) => {
-        if (res?.success) {
+        if (res.success) {
             window.location.href = "index.html"
         }
     })
@@ -106,44 +106,8 @@ document.getElementById('form-data').addEventListener('submit', function(event) 
     localStorage.setItem("test_taking", '')
 
     const toastLiveExample = document.getElementById('liveToast')
-});
-
-// const handleOnSubmit = (event) => {
-//     event.preventDefault();
-//     const form_data = {
-//         prefix, 
-//         firstname,
-//         lastname,
-//         class_no,
-//         school_name, 
-//         city,
-//         phone_number,
-//         email,
-//         total_fee,
-//         test_list: test_taking,
-//     };
-//     file_image_ref.append('user_data', JSON.stringify(form_data));
-
-//     handleOnSent(file_image_ref)
-//     .then((res) => {
-//         if (res.success) {
-//             window.location.href = "index.html"
-//         }
-//     })
-//     localStorage.setItem("prefix", '')
-//     localStorage.setItem("firstname", '')
-//     localStorage.setItem("lastname", '')
-//     localStorage.setItem("class_no", '')
-//     localStorage.setItem("school_name", '')
-//     localStorage.setItem("city", '')
-//     localStorage.setItem("phone_number", '')
-//     localStorage.setItem("email", '')
-//     localStorage.setItem("total_fee", '')
-//     localStorage.setItem("test_taking", '')
-
-//     const toastLiveExample = document.getElementById('liveToast')
-//     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-// };
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+};
 
 const handleOnSent = async (formData) => {
     try {

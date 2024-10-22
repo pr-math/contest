@@ -71,7 +71,7 @@
                     <label id="pay-detail-total-fee"><b>ค่าสมัครรวม:</b> - บาท</label>
                 </div>
             </div>
-            <form id="form-data">
+            <form>
                 <div class="pay-detail">
                     <label><i class="bi bi-bank2"  style="margin-left: 0.5rem; margin-right: 0.5rem;"></i><b>บัญชีธนาคาร</b></label>
                     <div class="row" style="padding: 0.5rem; margin-top: 0.25rem;">
@@ -94,7 +94,7 @@
                         <img src="./assets/pr_2024.jpg" id="imagePreview" class="img-fluid" alt="Image Preview" style="width: 50%;">
                     </div>
                     <div class="row" style="margin: 0.5rem; justify-content: center;">
-                        <button type="submit" class="btn" style="background-color: #3A6D8C; color: white; width: 8rem;" id="liveToastBtn">บันทึก</button>
+                        <button type="submit" class="btn" style="background-color: #3A6D8C; color: white; width: 8rem;" onclick="handleOnSubmit(event)">บันทึก</button>
                     </div>
                     <div class="toast-container position-fixed bottom-0 end-0 p-3">
                         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
