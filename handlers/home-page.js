@@ -136,3 +136,8 @@ const onChangClassNo = (event) => {
         m5_test.disabled = false;
     }
 };
+
+const handleRedirect = (event) => {
+    event.preventDefault();
+    window.location.href = 'sign-up-person.html'
+};
