@@ -74,6 +74,9 @@ document.getElementById('receipt_file').addEventListener('change', function(even
 
 const handleOnSubmit = (event) => {
     event.preventDefault();
+    const button = document.getElementById("btn_submit");
+    button.disabled = true;
+
     const form_data = {
         prefix, 
         firstname,
@@ -91,7 +94,12 @@ const handleOnSubmit = (event) => {
     handleOnSent(file_image_ref)
     .then((res) => {
         if (res.success) {
-            window.location.href = "index.html"
+            window.location.href = "index.html";
+            button.disabled = false;
+        } else {
+            setTimeout(() => {
+                button.disabled = false;
+            }, 3000)
         }
     })
     localStorage.setItem("prefix", '')
@@ -104,9 +112,6 @@ const handleOnSubmit = (event) => {
     localStorage.setItem("email", '')
     localStorage.setItem("total_fee", '')
     localStorage.setItem("test_taking", '')
-
-    const toastLiveExample = document.getElementById('liveToast')
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
 };
 
 const handleOnSent = async (formData) => {
