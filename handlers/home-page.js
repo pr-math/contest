@@ -139,5 +139,5 @@ const onChangClassNo = (event) => {
 
 const handleRedirect = (event) => {
     event.preventDefault();
-    window.location.href = 'sign-up-person.html'
+    window.location.href = 'check.html'
 };
