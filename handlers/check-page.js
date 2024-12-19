@@ -55,7 +55,14 @@ const formHandle = (event) => {
                 testTakings = testTakings + `<div style="margin-left: 0.5rem;">${i+1}.${convertToTestTaking(userData.test_list[i])}</div>`;
             };
 
-            let scoreLists = userData.score_list === null ? 'ไม่มีข้อมูล' : '';
+            let scoreLists = userData.score_list === null 
+                ?   `
+                    <div class="form-floating col" style="padding: 2rem; border-radius: 4px; text-align: center;">
+                        <h2 style="font-size: 1rem; font-weight: 400;">ไม่มีข้อมูล</h2>
+                    </div>
+                    `
+                : '';
+
             for (let i=0; i<userData?.score_list?.length; i++) {
                 scoreLists = scoreLists + `
                     <div class="row" style="margin-top: 0.25rem;">
