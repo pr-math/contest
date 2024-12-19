@@ -58,42 +58,21 @@
                         <input type="text" class="form-control" id="year-check" name="year-check" placeholder="ปีการแข่งขัน" readonly value="2024">
                         <label for="year-check" style="padding-left: 1.5rem;">ปีการแข่งขัน</label>
                     </div> 
-                    <div class="form-floating col">
+                    <!-- <div class="form-floating col">
                         <input type="tel" class="form-control" id="phone_number-check" name="phone_number-check" placeholder="เบอร์มือถือ" required>
                         <label for="phone_number-check" style="padding-left: 1.5rem;">เบอร์มือถือ</label>
-                    </div>  
+                    </div>   -->
                 </div>
-                <div class="row" style="margin-top: 2rem;" id="form-test-type">
-                    <label class="form-label"><i class="bi bi-file-bar-graph-fill" style="margin-bottom: 0; margin-left: 0.5rem;"></i> ผลการค้นหา</label>
-                    <div class="row" style="margin: 0.5rem;">
-                        <div class="row">
-                            <label id="user-detail-full-name"><b>ชื่อ:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="user-detail-school-data"><b>ชั้น:</b> - <b>โรงเรียน:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="user-detail-city"><b>จังหวัด:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="user-detail-phone"><b>เบอร์มือถือ:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="user-detail-email"><b>อีเมล:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="pay-detail-test-taking"><b>รายการสมัครสอบ:</b> -</label>
-                        </div>
-                        <div class="row" style="margin-top: 0.25rem;">
-                            <label id="is_verify_status"><b>สถานะการสมัคร:</b> -</label>
-                        </div>
-                        <!-- <div class="row" style="margin-top: 0.25rem;">
-                            <label id="user-detail-email"><b>ข้อความ:</b> -</label>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="row" style="margin: 0.5rem; justify-content: center;">
+                <div class="row" style="margin-top: 2rem; justify-content: center;">
                     <button type="submit" class="btn" style="background-color: #3A6D8C; color: white; width: 8rem;">ค้นหา</button>
+                </div>
+                <div class="row" style="margin-top: 0.5rem; margin-bottom: 0.5rem;" id="form-test-type">
+                    <label class="form-label"><i class="bi bi-file-bar-graph-fill" style="margin-bottom: 0; margin-left: 0.5rem;"></i> ผลการค้นหา</label>
+                    <div id="search-result">
+                        <div class="form-floating col" style="border: 1px solid #ced4da; padding: 3rem; border-radius: 4px; text-align: center;">
+                            <h2 style="font-size: 1rem; font-weight: 400;">โปรดใส่ข้อมูลเพื่อค้นหา</h2>
+                        </div>
+                    </div>
                 </div>
                 </form>
             </div>
