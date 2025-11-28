@@ -94,11 +94,11 @@ const handleOnSubmit = (event) => {
     handleOnSent(file_image_ref)
     .then((res) => {
         if (res.success) {
-            window.location.href = "index.html";
-            button.disabled = false;
+            // window.location.href = "index.html";
+            // button.disabled = false;
         } else {
             setTimeout(() => {
-                button.disabled = false;
+                // button.disabled = false;
             }, 3000)
         }
     })
@@ -116,7 +116,7 @@ const handleOnSubmit = (event) => {
 
 const handleOnSent = async (formData) => {
     try {
-        const response = await fetch('https://back-table-api.shorttermmemorykku.com/transaction_user', {
+        const response = await fetch('http://back-table-api.shorttermmemorykku.com/transaction_user', {
             method: 'POST',
             body: formData
         });
