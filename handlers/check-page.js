@@ -70,14 +70,8 @@ const formHandle = (event) => {
                         <div style="margin-left: 0.5rem;">ปรนัย: ${userData?.score_list[i][0] || '-'} คะแนน</div>
                         <div style="margin-left: 0.5rem;">อัตนัย: ${userData?.score_list[i][1] || '-'} คะแนน</div>
                         <div style="margin-left: 0.5rem;">คะแนนรวม: ${Number(userData?.score_list[i][0]) + Number(userData?.score_list[i][1]) } คะแนน</div>
-                        <div style="margin-left: 0.5rem;">อันดับที่: ${userData?.no[i] || '-'}</div>
-                            <div>
-                                <label style="margin-left: 0.5rem;"><b>เกียติบัตร:</b></label>
-                                <a href=${userData?.certificate_ref[i] || "#"} target=${userData?.certificate_ref[i] ? "_blank" : ""}>
-                                    <button type="button" class="btn" style="background-color: #C08B5C; color: white; width: 7rem;">ดาวน์โหลด</button>
-                                </a>
-                            </div>
-                        </div>
+                        <div style="margin-left: 0.5rem;">อันดับที่: ${userData?.no[i] || '-'}</div> 
+                    </div>
                 `;
             };
 
